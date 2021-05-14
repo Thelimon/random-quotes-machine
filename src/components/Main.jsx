@@ -1,5 +1,5 @@
 import React from 'react'
-import Quotes from '../components/Quotes';
+import Quotes from './Quotes';
 import {Normalize} from 'styled-normalize';
 
 

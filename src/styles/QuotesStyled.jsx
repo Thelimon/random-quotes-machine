@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const ChangeColor = [
-  '#A0C2DF',
+const ChangeColor = [
   '#A871BE',
+  '#A0C2DF',
   '#AC4818',
   '#0F471C',
   '#852D6D',
@@ -22,23 +22,42 @@ export const ChangeColor = [
   '#EAEC8C'
 ];
 
-export const MainContainer = styled.main`
+const MainContainer = styled.main`
     display:flex;
     justify-content:center;
     align-items:center;
     height:100vh;
-    background-color: #A0C2DF;
+    background-color: black;
 `
-
-export const QuoteSection = styled.main`
+const QuoteSection = styled.section`
     width: 28.75rem;
     padding: 2.5rem 3.75rem;
     border-radius: 1rem;
     background-color: #FFFFFF;
 `
 
-const Quote = styled.h1`
-    
+const FinalSection = styled.article`
+    display:flex;   
 `
 
-export const QuoteStyled = ({quoteParam}) => <Quote>{quoteParam}</Quote>
+const QuoteH2Styled = styled.h2`
+    text-align:center;
+`
+
+const QuotePStyled = styled.p`
+    text-align:right;
+`
+
+const ButtonStyled = styled.button`
+    background-color:red;
+`
+
+const IconStyled = styled.i`
+  font-size: 2.3rem;
+  &&:nth-child(1){
+    margin-right: .5rem;
+  }
+`
+
+export {ChangeColor, MainContainer, QuoteSection, FinalSection, QuoteH2Styled, QuotePStyled, ButtonStyled,
+        IconStyled}
