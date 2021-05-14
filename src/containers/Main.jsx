@@ -1,9 +1,9 @@
 import React from 'react'
 import Quotes from '../components/Quotes';
-import Normalize from 'react-normalize';
+import {Normalize} from 'styled-normalize';
 
 
-const main = () => {
+const Main = () => {
     return (
         <>
             <Normalize />
@@ -12,4 +12,4 @@ const main = () => {
     )
 }
 
-export default main;
+export default Main;
