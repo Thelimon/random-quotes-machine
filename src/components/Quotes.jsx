@@ -8,7 +8,7 @@ const Quotes = () => {
     const quotes = useQuotesApi('https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json');
     const {data} = quotes;
 
-    const [color, setcolor] = useState('lightblue');
+    const [color, setcolor] = useState('#a871be');
     const [phrase, setphrase] = useState(0);
     
     const handleClick = () =>{
@@ -18,13 +18,11 @@ const Quotes = () => {
 
     const changeQuotePhrase = () =>{
         let newQuote = Math.floor(Math.random() * data.length);
-        console.log(newQuote);
         return data[newQuote];
     }
 
     const changeQuoteColor = () =>{
         let style = Math.floor(Math.random() * ChangeColor.length);
-        console.log(style);
         return ChangeColor[style];
     }
     
@@ -35,23 +33,23 @@ const Quotes = () => {
 
                     <QuoteH2Styled style={{color: color}}> 
                         <FaQuoteLeft />
-                        {`${data[phrase] && data[phrase].quote}`}
+                        {`${phrase && phrase.quote}`}
                      </QuoteH2Styled>
 
                     <QuotePStyled style={{color: color}}> 
-                        {`${data[phrase] && data[phrase].author}`} 
+                        {`${phrase && phrase.author}`} 
                     </QuotePStyled>
 
                     <FinalSection>
                         <a href={"https://twitter.com/"}>
                             <IconStyled>
-                                <FaTwitterSquare />
+                                <FaTwitterSquare style={{color: color}} />
                             </IconStyled>
                         </a>
 
                         <a href="https://www.tumblr.com/">
                             <IconStyled>
-                                <FaTumblrSquare />
+                                <FaTumblrSquare style={{color: color}}/>
                             </IconStyled>
                         </a>
 

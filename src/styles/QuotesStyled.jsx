@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const ChangeColor = [
-  '#A871BE',
-  '#A0C2DF',
+  '#a871be',
+  '#2471b4',
   '#AC4818',
   '#0F471C',
   '#852D6D',
@@ -16,10 +16,10 @@ const ChangeColor = [
   '#23BA5C',
   '#21230D',
   '#AB7A7C',
-  '#4BADA4',
-  '#9AE9D6',
+  '#003a34',
+  '#007459',
   '#40A69A',
-  '#EAEC8C'
+  '#5a5a57'
 ];
 
 const MainContainer = styled.main`
@@ -62,7 +62,7 @@ const ButtonStyled = styled.button`
     border-radius: .4rem;
     border:none;
     color: #F0F0F0; 
-    
+    cursor: pointer;
 `
 
 export {ChangeColor, MainContainer, QuoteSection, FinalSection, QuoteH2Styled, QuotePStyled, ButtonStyled,
