@@ -57,8 +57,12 @@ const IconStyled = styled.i`
 
 const ButtonStyled = styled.button`
     height: 2.2rem;
-    width: 6rem;
+    width: 6.5rem;
     margin-left: auto;
+    border-radius: .4rem;
+    border:none;
+    color: #F0F0F0; 
+    
 `
 
 export {ChangeColor, MainContainer, QuoteSection, FinalSection, QuoteH2Styled, QuotePStyled, ButtonStyled,
