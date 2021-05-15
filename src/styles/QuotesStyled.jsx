@@ -27,8 +27,8 @@ const MainContainer = styled.main`
     justify-content:center;
     align-items:center;
     height:100vh;
-    background-color: black;
 `
+
 const QuoteSection = styled.section`
     width: 28.75rem;
     padding: 2.5rem 3.75rem;
@@ -48,10 +48,6 @@ const QuotePStyled = styled.p`
     text-align:right;
 `
 
-const ButtonStyled = styled.button`
-    background-color:red;
-`
-
 const IconStyled = styled.i`
   font-size: 2.3rem;
   &&:nth-child(1){
@@ -59,5 +55,12 @@ const IconStyled = styled.i`
   }
 `
 
+const ButtonStyled = styled.button`
+    height: 2.2rem;
+    width: 6rem;
+    margin-left: auto;
+`
+
 export {ChangeColor, MainContainer, QuoteSection, FinalSection, QuoteH2Styled, QuotePStyled, ButtonStyled,
-        IconStyled}
+  IconStyled
+}

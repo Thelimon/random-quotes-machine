@@ -1,4 +1,3 @@
-import React from 'react'
 import Quotes from './Quotes';
 import {Normalize} from 'styled-normalize';
 
