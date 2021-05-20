@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {useQuotesApi} from '../hooks/useQuotesApi.jsx';
 import { MainContainer, QuoteSection, FinalSection, QuoteH2Styled, QuotePStyled, IconStyled, ButtonStyled, ChangeColor} 
         from '../styles/QuotesStyled.jsx';      
@@ -9,8 +9,14 @@ const Quotes = () => {
     const {data} = quotes;
 
     const [color, setcolor] = useState('#a871be');
-    const [phrase, setphrase] = useState(0);
-    
+    const [phrase, setphrase] = useState(0); 
+
+    useEffect(() => {
+        if(data.length>0){
+            setphrase(changeQuotePhrase());
+        }
+    }, [quotes]);
+
     const handleClick = () =>{
         setcolor(changeQuoteColor());
         setphrase(changeQuotePhrase());
@@ -19,7 +25,7 @@ const Quotes = () => {
     const changeQuotePhrase = () =>{
         let newQuote = Math.floor(Math.random() * data.length);
         return data[newQuote];
-    }
+    }  
 
     const changeQuoteColor = () =>{
         let style = Math.floor(Math.random() * ChangeColor.length);
@@ -32,7 +38,7 @@ const Quotes = () => {
                 <QuoteSection>
 
                     <QuoteH2Styled style={{color: color}}> 
-                        <FaQuoteLeft />
+                        <FaQuoteLeft/>
                         {`${phrase && phrase.quote}`}
                      </QuoteH2Styled>
 
